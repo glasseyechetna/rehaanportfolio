@@ -3,7 +3,7 @@ import React from "react";
 
 const Resume = () => {
   return (
-    <section className="bg-[#E7E1D7] ">
+    <section className="bg-white ">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 shadow-lg rounded-lg overflow-hidden">
         {/* Left Side - Image */}
         <div className="w-full h-full flex items-center justify-center bg-[#F5F0E9]">
@@ -15,7 +15,7 @@ const Resume = () => {
         </div>
 
         {/* Right Side - Details */}
-        <div className="bg-[#E7E1D7] p-6 md:p-10 flex flex-col justify-between">
+        <div className=" p-6 md:p-10 flex flex-col justify-between">
           {/* Header */}
           <div className="flex justify-between items-start mb-6">
             <div>
