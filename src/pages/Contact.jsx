@@ -17,7 +17,7 @@ const Contact = () => {
             <div>
               <p className="font-bold uppercase text-sm">Phone :</p>
               <p className="border-b border-gray-300 pb-2">
-                +00 123 456789 <br /> 555-5555-55555
+                929-727-7000
               </p>
             </div>
 
@@ -25,7 +25,8 @@ const Contact = () => {
             <div>
               <p className="font-bold uppercase text-sm">Social :</p>
               <p className="border-b border-gray-300 pb-2">
-                www.example.com <br /> example.org
+               rehaantuli2@gmail.com 
+               
               </p>
             </div>
 
@@ -33,7 +34,7 @@ const Contact = () => {
             <div>
               <p className="font-bold uppercase text-sm">Address :</p>
               <p className="border-b border-gray-300 pb-2">
-                Street Name, <br /> City, State, Country
+               480 2nd Ave,  <br /> New York, NY
               </p>
             </div>
           </div>
@@ -42,7 +43,7 @@ const Contact = () => {
         {/* Right Side */}
         <div className="flex-1 relative w-full flex justify-center">
           <img
-            src={"https://res.cloudinary.com/dp5koojwa/image/upload/v1756962556/samples/woman-on-a-football-field.jpg"}
+            src={"https://res.cloudinary.com/dp5koojwa/image/upload/v1764150086/3_kdz0zl.png"}
             alt="Contact"
             className="w-80 h-auto object-cover shadow-md"
           />

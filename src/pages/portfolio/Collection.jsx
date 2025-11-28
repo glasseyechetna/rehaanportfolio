@@ -1,0 +1,440 @@
+// src/pages/Collection.jsx
+import React from "react";
+
+const Collection = () => {
+  /* ---------- PAGE 1 IMAGES (replace with your own) ---------- */
+  const collageImages = [
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150093/46_ri86eq.png",
+   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150093/47_m9ufik.png",
+   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150094/48_rmlezi.png",
+  ];
+
+  /* ---------- PAGE 2 IMAGES (replace with your own) ---------- */
+  const groundFloorPlan =
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/50_h6dini.png" 
+  const firstFloorPlan =
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/55_iqser8.png" 
+  const spatialCollageImages = [
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/51_cdnclf.png"
+  ];
+
+  const programMaps = [
+   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/52_e2zwaz.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/53_jddkc5.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/54_rhggtz.png", 
+ 
+  ];
+
+  /* ---------- PAGE 3 IMAGES (replace with your own) ---------- */
+  const secondFloorPlan =
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/58_mucuqv.png" 
+  const crossSectionImage =
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/59_iwois2.png"
+  const frontElevationImage =
+   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/57_u2cmna.png"
+  const programDiagramImages = [
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/60_tzuvjw.png" 
+  ];
+
+  const sculptureImages = [
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150097/61_phctek.png",
+  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150097/62_astvav.png"
+  ];
+
+  return (
+    <main className="w-full bg-[#e6d0b6]">
+      {/* PAGE 1 */}
+      <HavenHouseSection images={collageImages} />
+
+      {/* separator between pages */}
+      <div className="h-px w-full bg-[#d1bda3] my-10 sm:my-16" />
+
+      {/* PAGE 2 */}
+      <HavenHousePlansSection
+        groundPlan={groundFloorPlan}
+        firstPlan={firstFloorPlan}
+        collageImages={spatialCollageImages}
+        programMaps={programMaps}
+      />
+
+      {/* separator between pages */}
+      <div className="h-px w-full bg-[#d1bda3] my-10 sm:my-16" />
+
+      {/* PAGE 3 */}
+      <HavenHouseVerticalSection
+        secondPlan={secondFloorPlan}
+        crossSection={crossSectionImage}
+        frontElevation={frontElevationImage}
+        programDiagrams={programDiagramImages}
+        sculptureImages={sculptureImages}
+      />
+    </main>
+  );
+};
+
+/* ---------------- PAGE 1 ---------------- */
+const HavenHouseSection = ({ images }) => (
+  <section className="w-full min-h-screen flex justify-center items-stretch py-6 sm:py-10">
+    <div className="relative w-full max-w-10xl bg-white border  px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+      {/* guide lines */}
+      <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
+      <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
+
+      <div className="relative z-10">
+        <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-8">
+          <div className="pt-1 sm:pt-2">
+            <span className="text-4xl sm:text-5xl font-light tracking-[0.2em] text-[#B17A5C]">
+              03
+            </span>
+          </div>
+
+          <div className="flex-1">
+            <h1 className="text-[1.05rem] sm:text-2xl md:text-3xl tracking-[0.25em] text-[#B17A5C] uppercase text-left">
+              Haven House – A Community Hub for Refugees
+            </h1>
+          </div>
+        </div>
+
+        {/* Collage images */}
+        <div className="mt-10 sm:mt-12 grid gap-6 md:grid-cols-3">
+          {images.map((src, idx) => (
+            <div
+              key={idx}
+              className="w-full bg-[#D6C4AF] overflow-hidden shadow-sm aspect-[3/5]"
+            >
+              <img
+                src={src}
+                alt={`Haven House collage ${idx + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ---------------- PAGE 2 ---------------- */
+const HavenHousePlansSection = ({
+  groundPlan,
+  firstPlan,
+  collageImages,
+  programMaps,
+}) => (
+  <section className="w-full min-h-screen flex justify-center items-stretch pb-10 sm:pb-16">
+    <div className="relative w-full max-w-10xl bg-white border  px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+      {/* guide lines */}
+      <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
+      <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
+
+      <div className="relative z-10">
+        {/* page number + title */}
+        <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-8">
+          <div className="pt-1 sm:pt-2">
+            <span className="text-4xl sm:text-5xl font-light tracking-[0.2em] text-[#B17A5C]">
+              04
+            </span>
+          </div>
+
+          <div className="flex-1">
+            <h2 className="text-[1.05rem] sm:text-2xl md:text-3xl tracking-[0.25em] text-[#B17A5C] uppercase text-left">
+              Haven House – Spatial Layout & Experience
+            </h2>
+          </div>
+        </div>
+
+        {/* TOP GRID */}
+        <div className="mt-8 sm:mt-10 grid gap-8 md:grid-cols-3">
+          {/* Ground floor */}
+          <div className="flex flex-col items-center">
+            <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
+              Ground floor
+            </p>
+            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[4/5] overflow-hidden">
+              <img
+                src={groundPlan}
+                alt="Ground floor plan"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* collage */}
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-3 sm:gap-4">
+            {collageImages.map((src, idx) => (
+              <div
+                key={idx}
+                className="w-full bg-[#D6C4AF] aspect-[4/5] overflow-hidden"
+              >
+                <img
+                  src={src}
+                  alt={`Haven reference ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* first floor */}
+          <div className="flex flex-col items-center">
+            <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
+              First floor
+            </p>
+            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[4/5] overflow-hidden">
+              <img
+                src={firstPlan}
+                alt="First floor plan"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM GRID */}
+        <div className="mt-10 sm:mt-12 grid gap-8 md:grid-cols-3">
+          {/* text left */}
+          <div className="text-[0.75rem] sm:text-sm leading-relaxed text-[#4A3B33]">
+            <p>
+              This is the first-stop space—providing day-one essentials,
+              immediate assistance, and basic resources to help refugees settle
+              in. Designed to offer a sense of safety and support, this floor
+              includes a universally accessible community restroom, a welcoming
+              reception area, a legal aid office for urgent guidance, and a
+              conference room where refugees can discuss their future plans with
+              advisors. It serves as a crucial starting point, ensuring
+              newcomers feel supported and informed from the moment they arrive.
+            </p>
+          </div>
+
+          {/* centre – program maps + legend */}
+          <div className="flex flex-col items-center gap-4">
+            <div className="grid grid-cols-3 gap-3 w-full max-w-md">
+              {programMaps.map((src, idx) => (
+                <div
+                  key={idx}
+                  className="w-full bg-[#D6C4AF] border border-[#c8b39a] aspect-[4/5] overflow-hidden"
+                >
+                  <img
+                    src={src}
+                    alt={`Program map ${idx + 1}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 flex flex-wrap justify-center gap-4 sm:gap-6 text-[0.7rem] sm:text-xs md:text-sm text-[#4A3B33]">
+              <LegendDot label="Safety" color="#F4A3A1" />
+              <LegendDot label="Belonging" color="#5CC4FF" />
+              <LegendDot label="Comfort" color="#E9E0C3" />
+              <LegendDot label="Opportunity" color="#C4A6FF" />
+              <LegendDot label="Guidance" color="#7E7A7A" />
+            </div>
+          </div>
+
+          {/* right text */}
+          <div className="text-[0.75rem] sm:text-sm leading-relaxed text-[#4A3B33]">
+            <p>
+              The first floor is designed to foster community, learning, and
+              personal growth. It features a dining hall and kitchen, creating a
+              welcoming space for shared meals and connection. Two classrooms
+              support daily learning sessions, while a conference room provides
+              a dedicated space for meetings and discussions. Additionally,
+              multiple seating arrangements ensure that refugees have a
+              comfortable environment to relax, collaborate, and focus on
+              rebuilding their lives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ---------------- PAGE 3 ---------------- */
+const HavenHouseVerticalSection = ({
+  secondPlan,
+  crossSection,
+  frontElevation,
+  programDiagrams,
+  sculptureImages,
+}) => (
+  <section className="w-full min-h-screen flex justify-center items-stretch pb-10 sm:pb-16">
+    <div className="relative w-full max-w-10xl bg-white  border px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+      {/* guide lines */}
+      <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
+      <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
+
+      <div className="relative z-10">
+        {/* page number + title */}
+        <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-8">
+          <div className="pt-1 sm:pt-2">
+            <span className="text-4xl sm:text-5xl font-light tracking-[0.2em] text-[#B17A5C]">
+              05
+            </span>
+          </div>
+
+          <div className="flex-1">
+            <h2 className="text-[1.05rem] sm:text-2xl md:text-3xl tracking-[0.25em] text-[#B17A5C] uppercase text-left">
+              Haven House – Verticality & Program Diagram
+            </h2>
+          </div>
+        </div>
+
+        {/* TOP GRID: second floor plan / cross section / program diagram */}
+        <div className="mt-8 sm:mt-10 grid gap-8 md:grid-cols-[1.1fr_1.8fr_1.1fr]">
+          {/* second floor plan */}
+          <div className="flex flex-col items-center">
+            <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
+              Second floor
+            </p>
+            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[4/5] overflow-hidden">
+              <img
+                src={secondPlan}
+                alt="Second floor plan"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* cross section */}
+          <div>
+            <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-center text-[#5a4739]">
+              Cross Section
+            </p>
+            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[8/3] overflow-hidden">
+              <img
+                src={crossSection}
+                alt="Cross section drawing"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* program diagram */}
+          <div className="flex flex-col items-start md:items-center gap-4">
+            <p className="text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
+              Program Diagram
+            </p>
+
+            <div className="flex flex-col gap-3">
+              {programDiagrams.map((src, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 text-[0.7rem] sm:text-xs text-[#4A3B33]"
+                >
+                  <div className="w-16 sm:w-20 bg-[#EBD9C5] border border-[#d1bda3] aspect-square overflow-hidden">
+                    <img
+                      src={src}
+                      alt={`Program diagram ${index + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {index === 0 && (
+                    <ul className="space-y-0.5">
+                      <li className="font-semibold">
+                        Second Floor – Healing, Wellness & Growth
+                      </li>
+                      <li>Soul of the centre</li>
+                      <li>Processing trauma</li>
+                      <li>Building confidence</li>
+                      <li>Future planning</li>
+                    </ul>
+                  )}
+                  {index === 1 && (
+                    <ul className="space-y-0.5">
+                      <li className="font-semibold">
+                        First Floor – Community & Culture
+                      </li>
+                      <li>Beating heart</li>
+                      <li>Connection & contribution</li>
+                      <li>Skill-building & learning</li>
+                    </ul>
+                  )}
+                  {index === 2 && (
+                    <ul className="space-y-0.5">
+                      <li className="font-semibold">
+                        Ground Floor – Survival & Support
+                      </li>
+                      <li>First-stop space</li>
+                      <li>Day-one essentials</li>
+                      <li>Immediate help</li>
+                      <li>Basic resources</li>
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM GRID: descriptions + elevation + sculptures */}
+        <div className="mt-10 sm:mt-12 grid gap-8 md:grid-cols-[1.2fr_1.5fr_1.1fr]">
+          {/* second floor description */}
+          <div className="text-[0.75rem] sm:text-sm leading-relaxed text-[#4A3B33]">
+            <p>
+              The second floor focuses on healing, wellness, and long-term
+              personal growth. It offers a calm, supportive environment with a
+              library for quiet reflection, several counseling rooms for mental
+              health support, and a prayer room for spiritual needs. A staff
+              office ensures accessible assistance, while the conference room is
+              suited for workshops and group discussions. The work lounge
+              provides a flexible space for studying, working, or relaxing.
+              Altogether, this floor encourages recovery, resilience, and
+              ongoing development.
+            </p>
+          </div>
+
+          {/* front elevation + text */}
+          <div className="text-[0.75rem] sm:text-sm leading-relaxed text-[#4A3B33] flex flex-col gap-4">
+            <div className="w-full max-w-md mx-auto bg-[#EBD9C5] border border-[#d1bda3] aspect-[5/2] overflow-hidden opacity-80">
+              <img
+                src={frontElevation}
+                alt="Front elevation"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <p>
+              The front elevation of our site at 305 7th Avenue showcases its
+              prominent location in the heart of the Flatiron District. With its
+              central placement and strong street presence, it offers the
+              perfect setting for a refugee center—easily accessible, welcoming,
+              and deeply connected to the surrounding community.
+            </p>
+          </div>
+
+          {/* vertical sculptures */}
+          <div className="flex flex-row md:flex-col items-center justify-center gap-8">
+            {sculptureImages.map((src, idx) => (
+              <div
+                key={idx}
+                className="w-16 sm:w-20 bg-[#EBD9C5] border border-[#d1bda3] aspect-[1/4] overflow-hidden"
+              >
+                <img
+                  src={src}
+                  alt={`Vertical element ${idx + 1}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ---------- SMALL LEGEND DOT COMPONENT ---------- */
+const LegendDot = ({ label, color }) => (
+  <div className="flex items-center gap-2">
+    <span
+      className="inline-block w-4 h-4 sm:w-5 sm:h-5 rounded-full"
+      style={{ backgroundColor: color }}
+    />
+    <span>{label}</span>
+  </div>
+);
+
+export default Collection;

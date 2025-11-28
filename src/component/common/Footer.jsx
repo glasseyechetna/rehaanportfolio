@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#E7E1D7] text-[#4B4B4B] mt-10">
+    <footer className="bg-[#e6d0b6] text-[#4B4B4B] mt-10">
       <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-15">
         {/* About Section */}
         <div>
@@ -19,11 +19,7 @@ const Footer = () => {
             Quick Links
           </h2>
           <ul className="space-y-2 text-sm">
-            <li>
-              <Link to="/about" className="hover:text-[#C08457]">
-                About Me
-              </Link>
-            </li>
+            
             <li>
               <Link to="/resume" className="hover:text-[#C08457]">
                 Resume
@@ -55,19 +51,12 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h2 className="text-lg font-semibold mb-3">Contact</h2>
-          <p className="text-sm">Email: hello@example.com</p>
-          <p className="text-sm">Phone: +123 456 789</p>
+          <p className="text-sm">Email: rehaantuli2@gmail.com</p>
+          <p className="text-sm">Phone:  929-727-7000</p>
           <div className="flex gap-4 mt-4">
+         
             <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#C08457]"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/"
+              href="https://linkedin.com/in/rehaan-tuli"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#C08457]"
@@ -75,7 +64,7 @@ const Footer = () => {
               LinkedIn
             </a>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:rehaantuli2@gmail.com"
               className="hover:text-[#C08457]"
             >
               Email
