@@ -13,7 +13,7 @@ const Header = () => {
       children: [
         { name: "Interior Design", path: "/portfolio/interior" },
         { name: "Product Design", path: "/portfolio/product" },
-        { name: "Collection Design", path: "/portfolio/collection" },
+        { name: "Design Collection", path: "/portfolio/collection" },
       ],
     },
     { name: "Resume", path: "/resume" },

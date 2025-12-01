@@ -2,43 +2,44 @@
 import React from "react";
 
 const Collection = () => {
-  /* ---------- PAGE 1 IMAGES (replace with your own) ---------- */
+  /* ---------- PAGE 1 IMAGES ---------- */
   const collageImages = [
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150093/46_ri86eq.png",
-   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150093/47_m9ufik.png",
-   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150094/48_rmlezi.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150093/46_ri86eq.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150093/47_m9ufik.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150094/48_rmlezi.png",
   ];
 
-  /* ---------- PAGE 2 IMAGES (replace with your own) ---------- */
+  /* ---------- PAGE 2 IMAGES ---------- */
   const groundFloorPlan =
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/50_h6dini.png" 
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/50_h6dini.png";
   const firstFloorPlan =
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/55_iqser8.png" 
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/55_iqser8.png";
   const spatialCollageImages = [
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/51_cdnclf.png"
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/51_cdnclf.png",
   ];
 
   const programMaps = [
-   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/52_e2zwaz.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/52_e2zwaz.png",
     "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/53_jddkc5.png",
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/54_rhggtz.png", 
- 
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150095/54_rhggtz.png",
   ];
 
-  /* ---------- PAGE 3 IMAGES (replace with your own) ---------- */
+  /* ---------- PAGE 3 IMAGES ---------- */
   const secondFloorPlan =
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/58_mucuqv.png" 
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/58_mucuqv.png";
   const crossSectionImage =
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/59_iwois2.png"
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/59_iwois2.png";
   const frontElevationImage =
-   "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/57_u2cmna.png"
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/57_u2cmna.png";
+
+  // this image already has all 3 program cubes + text inside
   const programDiagramImages = [
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/60_tzuvjw.png" 
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150096/60_tzuvjw.png",
   ];
 
   const sculptureImages = [
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150097/61_phctek.png",
-  "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150097/62_astvav.png"
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150097/61_phctek.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150097/62_astvav.png",
   ];
 
   return (
@@ -75,7 +76,7 @@ const Collection = () => {
 /* ---------------- PAGE 1 ---------------- */
 const HavenHouseSection = ({ images }) => (
   <section className="w-full min-h-screen flex justify-center items-stretch py-6 sm:py-10">
-    <div className="relative w-full max-w-10xl bg-white border  px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+    <div className="relative w-full max-w-10xl bg-white border px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
       {/* guide lines */}
       <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
       <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
@@ -123,26 +124,13 @@ const HavenHousePlansSection = ({
   programMaps,
 }) => (
   <section className="w-full min-h-screen flex justify-center items-stretch pb-10 sm:pb-16">
-    <div className="relative w-full max-w-10xl bg-white border  px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+    <div className="relative w-full max-w-10xl bg-white border px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
       {/* guide lines */}
       <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
       <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
 
       <div className="relative z-10">
-        {/* page number + title */}
-        <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-8">
-          <div className="pt-1 sm:pt-2">
-            <span className="text-4xl sm:text-5xl font-light tracking-[0.2em] text-[#B17A5C]">
-              04
-            </span>
-          </div>
-
-          <div className="flex-1">
-            <h2 className="text-[1.05rem] sm:text-2xl md:text-3xl tracking-[0.25em] text-[#B17A5C] uppercase text-left">
-              Haven House – Spatial Layout & Experience
-            </h2>
-          </div>
-        </div>
+        
 
         {/* TOP GRID */}
         <div className="mt-8 sm:mt-10 grid gap-8 md:grid-cols-3">
@@ -161,7 +149,7 @@ const HavenHousePlansSection = ({
           </div>
 
           {/* collage */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 gap-3 sm:gap-4">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4">
             {collageImages.map((src, idx) => (
               <div
                 key={idx}
@@ -252,179 +240,125 @@ const HavenHousePlansSection = ({
   </section>
 );
 
-/* ---------------- PAGE 3 ---------------- */
+/* ---------------- PAGE 3 (FIXED LAYOUT) ---------------- */
 const HavenHouseVerticalSection = ({
   secondPlan,
   crossSection,
   frontElevation,
   programDiagrams,
   sculptureImages,
-}) => (
-  <section className="w-full min-h-screen flex justify-center items-stretch pb-10 sm:pb-16">
-    <div className="relative w-full max-w-10xl bg-white  border px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
-      {/* guide lines */}
-      <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
-      <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
+}) => {
+  const programImage = programDiagrams[0]; // your tall stacked diagram
 
-      <div className="relative z-10">
-        {/* page number + title */}
-        <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-8">
-          <div className="pt-1 sm:pt-2">
-            <span className="text-4xl sm:text-5xl font-light tracking-[0.2em] text-[#B17A5C]">
-              05
-            </span>
-          </div>
+  return (
+    <section className="w-full flex justify-center items-stretch pb-10 sm:pb-16">
+      <div className="relative w-full max-w-10xl bg-white border px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+        {/* guide lines */}
+        <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
+        <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
 
-          <div className="flex-1">
-            <h2 className="text-[1.05rem] sm:text-2xl md:text-3xl tracking-[0.25em] text-[#B17A5C] uppercase text-left">
-              Haven House – Verticality & Program Diagram
-            </h2>
-          </div>
-        </div>
+        <div className="relative z-10">
+         
 
-        {/* TOP GRID: second floor plan / cross section / program diagram */}
-        <div className="mt-8 sm:mt-10 grid gap-8 md:grid-cols-[1.1fr_1.8fr_1.1fr]">
-          {/* second floor plan */}
-          <div className="flex flex-col items-center">
-            <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
-              Second floor
-            </p>
-            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[4/5] overflow-hidden">
-              <img
-                src={secondPlan}
-                alt="Second floor plan"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* cross section */}
-          <div>
-            <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-center text-[#5a4739]">
-              Cross Section
-            </p>
-            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[8/3] overflow-hidden">
-              <img
-                src={crossSection}
-                alt="Cross section drawing"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* program diagram */}
-          <div className="flex flex-col items-start md:items-center gap-4">
-            <p className="text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
-              Program Diagram
-            </p>
-
-            <div className="flex flex-col gap-3">
-              {programDiagrams.map((src, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 text-[0.7rem] sm:text-xs text-[#4A3B33]"
-                >
-                  <div className="w-16 sm:w-20 bg-[#EBD9C5] border border-[#d1bda3] aspect-square overflow-hidden">
-                    <img
-                      src={src}
-                      alt={`Program diagram ${index + 1}`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-
-                  {index === 0 && (
-                    <ul className="space-y-0.5">
-                      <li className="font-semibold">
-                        Second Floor – Healing, Wellness & Growth
-                      </li>
-                      <li>Soul of the centre</li>
-                      <li>Processing trauma</li>
-                      <li>Building confidence</li>
-                      <li>Future planning</li>
-                    </ul>
-                  )}
-                  {index === 1 && (
-                    <ul className="space-y-0.5">
-                      <li className="font-semibold">
-                        First Floor – Community & Culture
-                      </li>
-                      <li>Beating heart</li>
-                      <li>Connection & contribution</li>
-                      <li>Skill-building & learning</li>
-                    </ul>
-                  )}
-                  {index === 2 && (
-                    <ul className="space-y-0.5">
-                      <li className="font-semibold">
-                        Ground Floor – Survival & Support
-                      </li>
-                      <li>First-stop space</li>
-                      <li>Day-one essentials</li>
-                      <li>Immediate help</li>
-                      <li>Basic resources</li>
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* BOTTOM GRID: descriptions + elevation + sculptures */}
-        <div className="mt-10 sm:mt-12 grid gap-8 md:grid-cols-[1.2fr_1.5fr_1.1fr]">
-          {/* second floor description */}
-          <div className="text-[0.75rem] sm:text-sm leading-relaxed text-[#4A3B33]">
-            <p>
-              The second floor focuses on healing, wellness, and long-term
-              personal growth. It offers a calm, supportive environment with a
-              library for quiet reflection, several counseling rooms for mental
-              health support, and a prayer room for spiritual needs. A staff
-              office ensures accessible assistance, while the conference room is
-              suited for workshops and group discussions. The work lounge
-              provides a flexible space for studying, working, or relaxing.
-              Altogether, this floor encourages recovery, resilience, and
-              ongoing development.
-            </p>
-          </div>
-
-          {/* front elevation + text */}
-          <div className="text-[0.75rem] sm:text-sm leading-relaxed text-[#4A3B33] flex flex-col gap-4">
-            <div className="w-full max-w-md mx-auto bg-[#EBD9C5] border border-[#d1bda3] aspect-[5/2] overflow-hidden opacity-80">
-              <img
-                src={frontElevation}
-                alt="Front elevation"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <p>
-              The front elevation of our site at 305 7th Avenue showcases its
-              prominent location in the heart of the Flatiron District. With its
-              central placement and strong street presence, it offers the
-              perfect setting for a refugee center—easily accessible, welcoming,
-              and deeply connected to the surrounding community.
-            </p>
-          </div>
-
-          {/* vertical sculptures */}
-          <div className="flex flex-row md:flex-col items-center justify-center gap-8">
-            {sculptureImages.map((src, idx) => (
-              <div
-                key={idx}
-                className="w-16 sm:w-20 bg-[#EBD9C5] border border-[#d1bda3] aspect-[1/4] overflow-hidden"
-              >
+          {/* -------- ROW 1: 3 ITEMS, CROSS-SECTION BIG IN MIDDLE -------- */}
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            {/* Left: Second floor */}
+            <div className="lg:col-span-3 flex flex-col items-center">
+              <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
+                Second floor
+              </p>
+              <div className="w-full  aspect-[4/5] overflow-hidden">
                 <img
-                  src={src}
-                  alt={`Vertical element ${idx + 1}`}
+                  src={secondPlan}
+                  alt="Second floor plan"
                   className="w-full h-full object-contain"
                 />
               </div>
-            ))}
+            </div>
+
+            {/* Middle: BIG cross section */}
+            <div className="lg:col-span-6">
+              <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-center text-[#5a4739]">
+                Cross Section
+              </p>
+              <div className="w-full aspect-[16/6] overflow-hidden">
+                <img
+                  src={crossSection}
+                  alt="Cross section drawing"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Right: tall program diagram */}
+            <div className="lg:col-span-3 flex flex-col items-center lg:items-start">
+              <p className="mb-3 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
+                Program Diagram
+              </p>
+              <div className="w-40 sm:w-48 lg:w-full max-w-[220px]  border border-[#d1bda3] aspect-[3/7] overflow-hidden">
+                <img
+                  src={programImage}
+                  alt="Program diagram"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* -------- ROW 2: 3 ITEMS, LIKE BOARD -------- */}
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            {/* Left text */}
+            <div className="lg:col-span-4 text-[0.75rem] sm:text-sm text-[#4A3B33] leading-relaxed">
+              <p>
+                The second floor focuses on healing, wellness, and long-term
+                personal growth. It offers a calm, supportive environment with a
+                library for quiet reflection, several counseling rooms, and a
+                prayer room. A staff office ensures accessible assistance, while
+                the conference room is suited for workshops and group
+                discussions. The work lounge provides a flexible space for
+                studying, working, or relaxing, encouraging recovery and
+                resilience.
+              </p>
+            </div>
+
+            {/* middle elevation + text */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="w-full max-w-xl  aspect-[15/7] overflow-hidden opacity-80">
+                <img
+                  src={frontElevation}
+                  alt="Front elevation"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="mt-3 text-[0.75rem] sm:text-sm text-[#4A3B33] leading-relaxed">
+                The front elevation of our site at 305 7th Avenue showcases its
+                prominent location in the heart of the Flatiron District,
+                creating a welcoming presence for the refugee centre.
+              </p>
+            </div>
+
+           {/* right sculptures */}
+<div className="lg:col-span-2 flex flex-row items-center justify-center lg:justify-end gap-8">
+  {sculptureImages.map((src, idx) => (
+    <div
+      key={idx}
+      className=" sm:w-20 aspect-[3/4] overflow-hidden w-800 h-40 "
+    >
+      <img
+        src={src}
+        alt={`Vertical element ${idx + 1}`}
+        className="w-full h-full "
+      />
+    </div>
+  ))}
+</div>
+
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ---------- SMALL LEGEND DOT COMPONENT ---------- */
 const LegendDot = ({ label, color }) => (

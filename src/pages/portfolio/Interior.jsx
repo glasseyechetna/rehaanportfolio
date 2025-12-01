@@ -13,7 +13,6 @@ const Interior = () => {
   // PAGE 2 IMAGES
   const collageImages = [
     "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150084/9_kjethx.png",
-   
   ];
 
   const planImages = [
@@ -27,20 +26,14 @@ const Interior = () => {
     "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150087/14_wdvo7i.png",
   ];
 
-  // PAGE 3 IMAGES (6 Cloudinary URLs)
-  // 0 – exploded axon view
-  // 1 – tall façade / tree image
-  // 2 – GF section
-  // 3 – FF section
-  // 4 – physical model (study lounge)
-  // 5 – physical model (meeting room)
+  // PAGE 3 IMAGES
   const page3Images = [
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150090/17_mbdxlh.png",
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150089/18_w2shfa.png",
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150088/19_folgcq.png",
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150089/20_oe4maj.png",
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150089/21_udwnof.png",
-    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150091/22_iufgkk.png",
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150090/17_mbdxlh.png", // exploded
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150089/18_w2shfa.png", // tall facade
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150088/19_folgcq.png", // GF
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150089/20_oe4maj.png", // FF
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150089/21_udwnof.png", // study lounge
+    "https://res.cloudinary.com/dp5koojwa/image/upload/v1764150091/22_iufgkk.png", // meeting room
   ];
 
   return (
@@ -212,100 +205,103 @@ const Interior = () => {
         {/* SEPARATOR LINE FOR PAGE 3 */}
         <div className="mt-16 border-t border-dashed border-[#c5a98b]" />
 
-        {/* ============ PAGE 3 BLOCK ============ */}
-        <div className="relative z-10 mt-10">
-          {/* TOP ROW: exploded view, facade, sections */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
-            {/* LEFT – Exploded axon + text */}
-            <div>
-              <div className="w-full bg-[#D6C4AF] overflow-hidden">
-                <img
-                  src={page3Images[0]}
-                  alt="Exploded view"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="mt-4 text-[10px] sm:text-xs md:text-[11px] leading-relaxed text-[#5F4A3B]">
-                The first floor was selected for this exploded view to highlight
-                the seamless integration of housing and archival storage. The
-                composition reveals how circulation, structure, and program work
-                together, offering a clear and visually dynamic understanding of
-                the architectural layout and overall functionality of the
-                archive.
-              </p>
-            </div>
+        {/* ============ PAGE 3 BLOCK (FINAL) ============ */}
+<div className="relative z-10 mt-10 space-y-10">
 
-            {/* MIDDLE – Tall rounded façade image */}
-            <div className="flex flex-col items-center">
-              <div className="w-200PX h-300PX max-w-xs lg:max-w-sm mx-auto rounded-[999px] overflow-hidden bg-[#D6C4AF] aspect-[3/6]">
-                <img
-                  src={page3Images[1]}
-                  alt="Façade with tree"
-                  className="w-full h-full "
-                />
-              </div>
-            </div>
+  {/* TOP ROW – 3 IMAGES */}
+  <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr_1.4fr] gap-10 lg:gap-14 items-start">
+    {/* LEFT – Exploded view */}
+    <div className="w-full bg-[#D6C4AF] overflow-hidden">
+      <img
+        src={page3Images[0]}
+        alt="Exploded view"
+        className="w-full h-auto object-contain"
+      />
+    </div>
 
-            {/* RIGHT – GF & FF sections stacked */}
-            <div className="space-y-6">
-              <div>
-                <div className="text-xs tracking-[0.2em] text-center text-[#5F4A3B] mb-1">
-                  GF
-                </div>
-                <div className="w-full bg-[#D6C4AF] overflow-hidden">
-                  <img
-                    src={page3Images[2]}
-                    alt="Ground floor section"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              </div>
+    {/* MIDDLE – Tall green façade image */}
+    <div className="flex justify-center">
+      <div className="w-[220px] lg:w-[250px] aspect-[1/2.3] rounded-[120px] overflow-hidden bg-[#D6C4AF]">
+        <img
+          src={page3Images[1]}
+          alt="Façade with tree"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
 
-              <div>
-                <div className="text-xs tracking-[0.2em] text-center text-[#5F4A3B] mb-1">
-                  FF
-                </div>
-                <div className="w-full bg-[#D6C4AF] overflow-hidden">
-                  <img
-                    src={page3Images[3]}
-                    alt="First floor section"
-                    className="w-full h-auto "
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* BOTTOM ROW – 2 rounded model images */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <div className="rounded-[40px] overflow-hidden aspect-[4/2.2] bg-[#D6C4AF]">
-                <img
-                  src={page3Images[4]}
-                  alt="Physical model – study lounge"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="mt-2 text-[9px] sm:text-[10px] text-center text-[#5F4A3B]">
-                Physical Model Image (Study Lounge)
-              </p>
-            </div>
-
-            <div>
-              <div className="rounded-[40px] overflow-hidden aspect-[4/2.2] bg-[#D6C4AF]">
-                <img
-                  src={page3Images[5]}
-                  alt="Physical model – meeting room"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="mt-2 text-[9px] sm:text-[10px] text-center text-[#5F4A3B]">
-                Physical Model Image (Meeting room)
-              </p>
-            </div>
-          </div>
+    {/* RIGHT – GF + FF stacked */}
+    <div className="space-y-6">
+      <div>
+        <div className="text-xs tracking-[0.2em] text-center text-[#5F4A3B] mb-1">
+          GF
         </div>
-        {/* ============ END PAGE 3 BLOCK ============ */}
+        <div className="w-full bg-[#D6C4AF] overflow-hidden">
+          <img
+            src={page3Images[2]}
+            alt="Ground floor section"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+
+      <div>
+        <div className="text-xs tracking-[0.2em] text-center text-[#5F4A3B] mb-1">
+          FF
+        </div>
+        <div className="w-full bg-[#D6C4AF] overflow-hidden">
+          <img
+            src={page3Images[3]}
+            alt="First floor section"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* SECOND ROW – TEXT + TWO MODEL IMAGES */}
+  <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1.3fr_1.3fr] gap-10 lg:gap-14 items-start">
+    {/* LEFT – Text under exploded view */}
+    <div>
+      <p className="text-[10px] sm:text-xs md:text-[11px] leading-relaxed text-[#5F4A3B]">
+        The first floor was selected for this exploded view to emphasize the
+        seamless integration of housing and archival storage, providing a
+        visually dynamic and insightful representation of the architectural
+        layout and functionality.
+      </p>
+    </div>
+
+    {/* MIDDLE – Study lounge model */}
+    <div>
+      <div className="rounded-[40px] overflow-hidden aspect-[4/2.2] bg-[#D6C4AF]">
+        <img
+          src={page3Images[4]}
+          alt="Physical model – study lounge"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <p className="mt-2 text-[9px] sm:text-[10px] text-center text-[#5F4A3B]">
+        Physical Model Image (Study Lounge)
+      </p>
+    </div>
+
+    {/* RIGHT – Meeting room model */}
+    <div>
+      <div className="rounded-[40px] overflow-hidden aspect-[4/2.2] bg-[#D6C4AF]">
+        <img
+          src={page3Images[5]}
+          alt="Physical model – meeting room"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <p className="mt-2 text-[9px] sm:text-[10px] text-center text-[#5F4A3B]">
+        Physical Model Image (Meeting room)
+      </p>
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
   );

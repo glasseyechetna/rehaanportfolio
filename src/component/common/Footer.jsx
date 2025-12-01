@@ -37,7 +37,7 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/portfolio/collection" className="hover:text-[#C08457]">
-                Design Collection
+               Design Collection 
               </Link>
             </li>
             <li>
