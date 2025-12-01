@@ -124,7 +124,7 @@ const HavenHousePlansSection = ({
   programMaps,
 }) => (
   <section className="w-full min-h-screen flex justify-center items-stretch pb-10 sm:pb-16">
-    <div className="relative w-full max-w-10xl bg-white  px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+    <div className="relative w-full max-w-10xl bg-white border  px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
       {/* guide lines */}
       <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
       <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
