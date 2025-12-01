@@ -124,7 +124,7 @@ const HavenHousePlansSection = ({
   programMaps,
 }) => (
   <section className="w-full min-h-screen flex justify-center items-stretch pb-10 sm:pb-16">
-    <div className="relative w-full max-w-10xl bg-white border px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
+    <div className="relative w-full max-w-10xl bg-white  px-4 sm:px-8 pt-8 pb-16 overflow-hidden">
       {/* guide lines */}
       <div className="pointer-events-none absolute top-6 bottom-6 left-10 sm:left-16 border-l border-dashed border-[#c5a98b]" />
       <div className="pointer-events-none absolute left-10 sm:left-16 right-6 sm:right-10 top-24 border-t border-dashed border-[#c5a98b]" />
@@ -139,7 +139,7 @@ const HavenHousePlansSection = ({
             <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
               Ground floor
             </p>
-            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[4/5] overflow-hidden">
+            <div className="w-full aspect-[4/5] overflow-hidden">
               <img
                 src={groundPlan}
                 alt="Ground floor plan"
@@ -153,7 +153,7 @@ const HavenHousePlansSection = ({
             {collageImages.map((src, idx) => (
               <div
                 key={idx}
-                className="w-full bg-[#D6C4AF] aspect-[4/5] overflow-hidden"
+                className="w-full  aspect-[4/5] overflow-hidden"
               >
                 <img
                   src={src}
@@ -169,7 +169,7 @@ const HavenHousePlansSection = ({
             <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
               First floor
             </p>
-            <div className="w-full bg-[#EBD9C5] border border-[#d1bda3] aspect-[4/5] overflow-hidden">
+            <div className="w-full aspect-[4/5] overflow-hidden">
               <img
                 src={firstPlan}
                 alt="First floor plan"
@@ -201,7 +201,7 @@ const HavenHousePlansSection = ({
               {programMaps.map((src, idx) => (
                 <div
                   key={idx}
-                  className="w-full bg-[#D6C4AF] border border-[#c8b39a] aspect-[4/5] overflow-hidden"
+                  className="w-full  aspect-[4/5] overflow-hidden"
                 >
                   <img
                     src={src}
@@ -212,12 +212,12 @@ const HavenHousePlansSection = ({
               ))}
             </div>
 
-            <div className="mt-4 flex flex-wrap justify-center gap-4 sm:gap-6 text-[0.7rem] sm:text-xs md:text-sm text-[#4A3B33]">
-              <LegendDot label="Safety" color="#F4A3A1" />
-              <LegendDot label="Belonging" color="#5CC4FF" />
-              <LegendDot label="Comfort" color="#E9E0C3" />
-              <LegendDot label="Opportunity" color="#C4A6FF" />
-              <LegendDot label="Guidance" color="#7E7A7A" />
+            <div className="mt-3 flex flex-wrap justify-center gap-2 sm:gap-6 text-[0.1rem] sm:text-xs md:text-xs text-[#4A3B33]">
+              <LegendDot label="Safety" color="#F4A3A1"/>
+              <LegendDot label="Belonging" color="#5CC4FF"/>
+              <LegendDot label="Comfort" color="#E9E0C3"/>
+              <LegendDot label="Opportunity" color="#C4A6FF"/>
+              <LegendDot label="Guidance" color="#7E7A7A"/>
             </div>
           </div>
 
@@ -267,7 +267,7 @@ const HavenHouseVerticalSection = ({
               <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
                 Second floor
               </p>
-              <div className="w-full  aspect-[4/5] overflow-hidden">
+              <div className="w-full  aspect-[7/9] overflow-hidden">
                 <img
                   src={secondPlan}
                   alt="Second floor plan"
@@ -281,7 +281,7 @@ const HavenHouseVerticalSection = ({
               <p className="mb-2 text-xs sm:text-sm tracking-[0.18em] text-center text-[#5a4739]">
                 Cross Section
               </p>
-              <div className="w-full aspect-[16/6] overflow-hidden">
+              <div className="w-full aspect-[10/6] overflow-hidden">
                 <img
                   src={crossSection}
                   alt="Cross section drawing"
@@ -290,23 +290,62 @@ const HavenHouseVerticalSection = ({
               </div>
             </div>
 
-            {/* Right: tall program diagram */}
-            <div className="lg:col-span-3 flex flex-col items-center lg:items-start">
-              <p className="mb-3 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
-                Program Diagram
-              </p>
-              <div className="w-40 sm:w-48 lg:w-full max-w-[220px]  border border-[#d1bda3] aspect-[3/7] overflow-hidden">
-                <img
-                  src={programImage}
-                  alt="Program diagram"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
+           {/* Right: tall program diagram WITH TEXT (exact like your screenshot) */}
+<div className="lg:col-span-3 flex flex-col items-center lg:items-start">
+  <p className="mb-3 text-xs sm:text-sm tracking-[0.18em] text-[#5a4739]">
+    Program Diagram
+  </p>
+
+  <div className="flex flex-row items-start ">
+    
+    {/* tall diagram */}
+    <div className="w-52 sm:w-40 lg:w-74 aspect-[5/7] gap-1 overflow-hidden">
+      <img
+        src={programImage}
+        alt="Program diagram"
+        className="w-full h-full "
+      />
+    </div>
+
+    {/* TEXT LIST (exact from your PDF) */}
+    <div className="text-[0.7rem] sm:text-xs text-[#4A3B33]  leading-tight space-y-4">
+
+      <div>
+        <p className="font-semibold">Second Floor</p>
+        <p>Healing, Wellness & Growth</p>
+        <p>Soul of the centre</p>
+        <p>Processing trauma</p>
+        <p>Building confidence</p>
+        <p>Future planning</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">First Floor</p>
+        <p>Community, Culture </p>
+        <p>& Skill-Building </p>
+          <p>Beating heart</p>
+        <p>Connection</p>
+        <p>Community</p>
+        <p>Contribution</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Ground Floor</p>
+        <p>Survival & Practical support</p>
+        <p>First-stop space</p>
+        <p>Day-one essentials</p>
+        <p>Immediate help</p>
+        <p>Basic resources.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
           </div>
 
           {/* -------- ROW 2: 3 ITEMS, LIKE BOARD -------- */}
-          <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="mt-14 grid grid-cols-2 lg:grid-cols-12 gap-10">
             {/* Left text */}
             <div className="lg:col-span-4 text-[0.75rem] sm:text-sm text-[#4A3B33] leading-relaxed">
               <p>
@@ -336,22 +375,24 @@ const HavenHouseVerticalSection = ({
                 creating a welcoming presence for the refugee centre.
               </p>
             </div>
+           
+                <div className="w-30 h-50 overflow-hidden">
+              <img
+                src={sculptureImages[0]}
+                alt="sculptureImages"
+                className="w-full h-full "
+              />
+            </div>
+            <div className="w-30 h-50 overflow-hidden">
+              <img
+                src={sculptureImages[1]}
+                alt="sculptureImages"
+                className="w-full h-full "
+              />
+            </div>
+          
+            
 
-           {/* right sculptures */}
-<div className="lg:col-span-2 flex flex-row items-center justify-center lg:justify-end gap-8">
-  {sculptureImages.map((src, idx) => (
-    <div
-      key={idx}
-      className=" sm:w-20 aspect-[3/4] overflow-hidden w-800 h-40 "
-    >
-      <img
-        src={src}
-        alt={`Vertical element ${idx + 1}`}
-        className="w-full h-full "
-      />
-    </div>
-  ))}
-</div>
 
           </div>
         </div>
